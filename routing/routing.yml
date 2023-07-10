@@ -1,0 +1,8 @@
+name: routing
+channels:
+  - defaults
+dependencies:
+  - osmnx
+  - ipykernel
+  - geopy
+prefix: /Users/lisahligono/opt/anaconda3/envs/routing
