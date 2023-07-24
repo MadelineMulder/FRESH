@@ -1,0 +1,8 @@
+title: FRESH 
+description: This is a website for the final PLUS Practice for Software Development class for the FRESH project on routing during hurricane Dorian on Grand Bahama Island.
+theme: just-the-docs
+
+url: https://madelinemulder.github.io/FRESH
+
+aux_links: # remove if you don't want this link to appear on your pages
+  Template Repository: https://madelinemulder.github.io/FRESH
