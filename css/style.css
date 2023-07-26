@@ -16,8 +16,8 @@ icon {
 display: flex;
 margin: 15px;
 float: left;
-width: auto;
-height: auto;
+width: 40px;
+height: 40px;
 }
 
 nav ul {
