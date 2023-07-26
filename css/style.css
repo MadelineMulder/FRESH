@@ -36,6 +36,11 @@ nav a {
   text-decoration: none;
 }
 
+nav a:active {
+  background-color: #8fd8ff; /* Highlight color when active */
+  border-radius: 4px; /* Rounded corners for the highlight */
+}
+
 main {
   padding: 20px;
 }
