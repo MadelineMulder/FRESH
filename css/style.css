@@ -36,9 +36,11 @@ nav a {
   text-decoration: none;
 }
 
-nav a:active {
-  background-color: #8fd8ff; /* Highlight color when active */
-  border-radius: 4px; /* Rounded corners for the highlight */
+nav a:hover {
+  border-color: white;
+  border-left-color: black; 
+  border-top-color: black;
+  color: white; background-color: #8fd8ff;
 }
 
 nav li {
