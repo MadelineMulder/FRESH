@@ -42,7 +42,7 @@ nav a:active {
 }
 
 nav li {
-  list-style: url('https://cdn-icons-png.flaticon.com/128/2311/2311489.png');
+  list-style: url('wave.png');
   padding-left: 20px; /* Add some padding to separate the icon from the link text */
 }
 
