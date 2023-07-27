@@ -12,6 +12,15 @@ header {
   padding: 10px;
 }
 
+.container {
+  display: flex; /* Use Flexbox for two-column layout */
+}
+
+.column {
+  flex: 1; /* Equal width for both columns */
+  padding: 20px; /* Add some padding for spacing */
+}
+
 icon {
 display: block;
 margin: 15px;
