@@ -38,7 +38,7 @@
   <main class="main content">
       
     <section id = "data">
-      <h2>I Data & Tools</h2>
+      <h2>I. Data & Tools</h2>
       <p>To get started, make sure you have the following prerequisites:</p>
       <ul>
         <li>Web browser</li>
@@ -47,13 +47,13 @@
     </section>
 
     <section id = "webapplication">
-      <h2>II Web Application & Flask Set Up</h2>
+      <h2>II. Web Application & Flask Set Up</h2>
       <p>Flask is a lightweight web server gateway interface (WSGI) for web application development using python. The libraries used to develop the web application include: flask, osmnx, folium and geopandas.</p>
       <p>We design our homepage by HTML, this page allows a user to insert coordinates of start and end point that they want by Flood Routing Generator. Then it links to the routing map. Once you click on the route it will show you the hurricane track and movement maps.</p>
       <h3>Steps</h3>
       <ol type="1">
         <li>Created an environment and installed all the required packages</li>
-        <li></li>Imported all the packages</li>  
+        <li>Imported all the packages</li>  
         <li>Created a Flask interface application with the name @app and specified the path. In this case we have 3 paths: base, generate_route and hurricane_path</li>
           <ul>
             <li><code>@app.route("/")</code> - This route handles the default root URL</li> 
@@ -64,18 +64,18 @@
     </section>
 
     <section id = "routing">
-      <h2>III Routing</h2>
+      <h2>III. Routing</h2>
       <p>The OSMnx library was used for the routing portion of this project. Osmnx is a python package that lets you download geospatial data from OpenStreetMap and model, project, visualize, and analyze real-world street networks and any other geospatial geometries.</p>
     </section>
 
     <section id = "hurricane">  
-      <h2>IV Hurricane Visualization</h2>
+      <h2>IV. Hurricane Visualization</h2>
       <b>This part is divided into 2 maps</b>
       <h3>Hurricane formation animation</h3> 
       <p>This map shows the formation of Hurricane Dorian from the first day to the last day of the event. The hurricane formed on August 24, 2019 from a tropical wave in the Central Atlantic and gradually strengthened as it moved toward the Lesser Antilles and then hit the Grand Bahamas on August 26, 2019.</p>   
       <p>The hurricane edges have animated lines with movement effects using AntPath plugin of Folium Python module. The lines plot a route between multiple locations with the help of latitude and longitudes.</p> 
       <p>"AntPath" is an external plugin that allows you to create animated polylines on a Leaflet map. It adds a unique visual effect to your maps, making it look like ants are moving along the polylines. It provides a visually appealing way to display paths or routes.</p>
-      <b>Features:<b> 
+      <b>Features:</b> 
         <ul>
             <li>Animated ant-like movement along polylines, so in this hurricane event, we used this plugin to visualize the movement of each hurricane.</li> 
             <li></li>Customizable options for animation speed, color, weight, and more.</li>
@@ -86,7 +86,7 @@
     </section>
 
     <section id = "resources">
-      <h2>V Additional Resources</h2>
+      <h2>V. Additional Resources</h2>
       <ul>
         <li>OSMNX documentation: https://osmnx.readthedocs.io/en/stable/</li>
       </ul>
