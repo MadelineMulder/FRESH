@@ -4,4 +4,4 @@ At this moment the application can only be installed on localhost. To set this u
 
 In this installation example, we demonstrate using the conda 
 
-git clone 
+git clone https://github.com/MadelineMulder/FRESH.git
