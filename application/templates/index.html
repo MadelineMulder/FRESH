@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <!-- Heading -->
+<head>
+    <title>FRESH</title>
+<header><h1 style="font-family:verdana; font-size:200%;"><center>🌀FRESH🌀</center><h1></header>
+    <header><h1 style="font-family:verdana; font-size:150%;"><center>Flood Routing For Emergency Services For Hurricanes</center><h1></header>
+        <p style="font-family:verdana;">Hurricane Dorian was an extremely powerful and catastrophic Category 5 Atlantic hurricane, which became the most intense tropical cyclone on record to strike the Bahamas resulting to heavy rainfall and floods, and tied for strongest landfall in the Atlantic basin in 2019.<a href="https://blogs.nasa.gov/hurricanes/tag/dorian-2019/" target="_blank">Learn more</a>.</p>
+        <p style="font-family:verdana;">This webmap application let you find a route that avoids the floods from this area to a user-defined start location to a destination by inserting latitude and longitude.</p>
+<br>
+</head>
+
+<style>
+    .bordered {
+      width: 400px;
+      height: 250px;
+      padding: 10px;
+      border: 10px groove hsl(229, 66%, 28%);
+      border-radius: 25px;
+    }
+  </style>
+  
+<!-- Content -->
+</head><center><div class= "bordered">
+<body style="background-color:#EAF2F8;">
+    <center><h3 style="font-family:verdana; font-size:130%;">Flood Routing Generator⛕</h3></center>
+    <center><p style="font-family:verdana; font-size:100%;">Please insert your start and end location, then click "Generate route"</p></center>
+    <center><form action="/generate_route" method="post">
+        <label for="start_lat">Start Latitude:</label>
+        <input type="text" id="start_lat" name="start_lat"><br>
+
+        <label for="start_lng">Start Longitude:</label>
+        <input type="text" id="start_lng" name="start_lng"><br>
+
+        <label for="end_lat">End Latitude:</label>
+        <input type="text" id="end_lat" name="end_lat"><br>
+
+        <label for="end_lng">End Longitude:</label>
+        <input type="text" id="end_lng" name="end_lng"><br>
+
+        <input type="submit" value="Generate Route"></center></div>
+    </form></center><br>
+    <img src = "https://media.giphy.com/media/3ohhwGwq5M1yYNOsmY/giphy.gif" width="700" height="500" align="right" flex-shrink="0";/>
+    <img src = "https://media.giphy.com/media/WRLuJw0DtCDiuAi7uN/giphy.gif" width="800" height="500" align="left" flex-shrink="0";/>
+
+<p style="font-family:verdana; font-size:100%;"><br>This final project is a part of the course "Practice: Software Development 2023", University of Salzburg</p>
+<p style="font-family:verdana; font-size:90%;"><b>Created by: Parinda Pannoon, Madeline Mulder, Lisah Ligono</b></p>
+
+</body>
+</html>
