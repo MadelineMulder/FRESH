@@ -61,6 +61,16 @@ main {
   padding: 20px;
 }
 
+.banner {
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Styles for the banner image */
+.banner img {
+  width: 640px; 
+  height: 320px;
+}
+
 footer {
   background-color: #015486;
   color: #fff;
