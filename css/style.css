@@ -18,7 +18,7 @@ header {
 
 .column {
   flex: 1; /* Equal width for both columns */
-  /* Option to add some padding for spacing with  padding: 20px; */
+  padding: 10px; /* Option to add some padding for spacing */
 }
 
 .column img {
