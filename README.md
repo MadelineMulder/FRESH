@@ -47,7 +47,7 @@ You should have something like this:
 ## Contents of This Repository
 *In alphabetical order (images are not included in the following list)*
 
-* **Application Directory:** Contains the code for the Flask web application which hosts the routing and hurricane visualization apps
+* **Application Directory:**  Contains the code for the Flask web application which hosts the routing and hurricane visualization apps
     * **Template Directory:** Contains HTML code for Flask project homepage and sample coordinate for testing the routing app 
     * **color.py:** Contains code for styling hurricane visualization app
     * **freshenv.yml:** Contains environment for Flask projects
