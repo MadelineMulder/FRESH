@@ -24,7 +24,7 @@ header {
 .column img {
   display: block; /* Remove any extra space below the image */
   width: 80%; /* Desired width for the image */
-  max-width: 300px; /* Set a maximum width for the image */
+  max-width: 800px; /* Set a maximum width for the image */
   height: auto; /* Maintain the image's aspect ratio */
 }
 
