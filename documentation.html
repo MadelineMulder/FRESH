@@ -19,7 +19,7 @@
 
   <section id = "Welcome">
       <h1>Documentation</h1>
-      <p>Welcome to the documentation for Our GitHub Pages Website for the FRESH Project. Below are some guidelines and instructions on how to use the different features of the application.</p>
+      <p>Welcome to the documentation for the FRESH Project. The following information documents the different components of the web application as well as the data, tools, packages, and methodology used to create them, packages. Instructions on how to install, deploy, and visualize both elements of the web application are also included .</p>
   </section>
 
   <!-- Sidebar for navigating the documentation page -->
@@ -38,18 +38,27 @@
   <main class="main content">
     <section id = "data">
       <h2>I. Data & Tools</h2>
-      <p>To get started, make sure you have the following prerequisites:</p>
+      <p>Data & Sources</p>
       <ul>
-        <li>Web browser</li>
-        <li>Internet connection</li>
+        <li>Hurricane Dorian path (NOAA)</li>
+        <li>Boundary of area of interest (self-generated)</li>
+        <li>Flood mask (Copernicus Emergency Management Service) </li>
+      </ul>
+      <p>Tools</p>
+      <i>For more information on the python packages used see <b>Additional Resources</b> below</i>
+      <ul>
+        <li>OSMnx: OSMnx was used for routing analysis as it enabled the creation of real-world street networks to visualize the routes emergency services can take during a flood event.</li>
+        <li>Folium: Folium was used to visualize the hurricane's movement as well as different vector elements (such as marker location)s on the hurricane app.</li>
+        <li>Flask: Flask was used as a framework to host the two web routing and hurricane visualization mapping applications for easy organization and deployment.</li>
       </ul>
     </section>
 
     <section id = "webapplication">
       <h2>II. Web Application & Flask Set Up</h2>
-      <p>Flask is a lightweight web server gateway interface (WSGI) for web application development using python. The libraries used to develop the web application include: flask, osmnx, folium and geopandas.</p>
-      <p>We design our homepage by HTML, this page allows a user to insert coordinates of start and end point that they want by Flood Routing Generator. Then it links to the routing map. Once you click on the route it will show you the hurricane track and movement maps.</p>
-      <h3>Steps</h3>
+      <p>The libraries used to develop the web application include: flask, osmnx, folium and geopandas. Flask, a lightweight web server gateway interface (WSGI) for web application development using python, provided the framework within which the routing and hurricane visualization applications were developed and hosted. </p>
+      <p>The web application homepage was designed using HTML. The homepage allows a user to insert coordinates for the starting and endings point that they want to used in the Flood Routing Generator. The routing map then uses the provided coordinates to provide users with the best path for a vehicle to take between the two points. Users can click on the route to reveal the hurricane track and movement maps.</p>
+      
+      <h3>Methodology for Developing the Web Application</h3>
       <ol type="1">
         <li>Created an environment and installed all the required packages</li>
         <li>Imported all the packages</li>  
@@ -60,15 +69,29 @@
             <li><code>@app.route("/hurricane_path")</code> -  here we display the path for hurricane dorian in an interactive manner </li>
           </ul>
       </ol>
+      
+      <h3>Steps to Install and Deploy the FLASK web application</h3>
+      <ol type="1">
+        <li>Install the application using conda</li>
+        <li>Navigate to the <b>main.py</b> file and set the correct path to the <i>Grand_Bahama.shp</i> and <i>hurricanepolygon.shp</i> which are in the data folder.</li>  
+        <li>Navigate to the <b>index.html</b> file in the templates folder and set the correct path to the <i>Grand_Bahama.shp</i> and <i>hurricanepolygon.shp</i> which are in the data folder.</li>
+        <li>Run the script python main.py in your console and a url will be provided to visualize the application in your local machine.You should have something like this:</li>
+        <p align="center">
+        <img width="452" alt="fresh" src="https://github.com/MadelineMulder/FRESH/assets/72496335/35e904a6-cbc7-4dbe-b6cb-00d9d1d0f152"width="1000">
+        </p>
+        <li>To view the hurricane map change the local host path from …/generate_route to /hurricanepath.</li>
+      </ol>
     </section>
 
     <section id = "routing">
       <h2>III. Routing</h2>
+      <img src="routing.jpg" alt="Routing App homepage">
       <p>The OSMnx library was used for the routing portion of this project. Osmnx is a python package that lets you download geospatial data from OpenStreetMap and model, project, visualize, and analyze real-world street networks and any other geospatial geometries.</p>
     </section>
 
     <section id = "hurricane">  
       <h2>IV. Hurricane Visualization</h2>
+      <img src="hurricaneapp.jpg" alt="Hurricane App homepage">
       <b>This part is divided into 2 maps</b>
       <h3>Hurricane formation animation</h3> 
       <p>This map shows the formation of Hurricane Dorian from the first day to the last day of the event. The hurricane formed on August 24, 2019 from a tropical wave in the Central Atlantic and gradually strengthened as it moved toward the Lesser Antilles and then hit the Grand Bahamas on August 26, 2019.</p>   
@@ -87,7 +110,9 @@
     <section id = "resources">
       <h2>V. Additional Resources</h2>
       <ul>
-        <li>OSMNX documentation: https://osmnx.readthedocs.io/en/stable/</li>
+        <li><a href="https://osmnx.readthedocs.io/en/stable/">OSMnx documentation:</a></li>
+        <li><a href="https://pypi.org/project/folium/">Folium documentation:</a></li>
+        <li><a href="https://flask.palletsprojects.com/en/2.3.x/">Flask documentation:</a></li>
       </ul>
     </section>
   </main>
