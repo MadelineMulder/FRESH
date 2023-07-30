@@ -1,5 +1,8 @@
-![fresh logo banner](logo_banner.jpg "FRESH Logo Banner")
-# FRESH
+<p align="center">
+    <img src="logo_banner.jpg" alt="FRESH Logo Banner">
+</p>
+
+# Welcome to the FRESH Project
 *This is a repository for the final PLUS Practice for Software Development class (summer semester 2023).*  
 
 FRESH stands for **F**lood **R**outing for **E**mergency **S**ervices for **H**urricanes. 
@@ -16,13 +19,34 @@ In addition to the web application with the routing and hurricane apps a website
 
 ## How to Deploy the FRESH Web Application Using Flask
 
+At this moment the application can only be installed on localhost. To set this up, please follow the following guidelines:
+
+In this installation example, we demonstrate how to deploy the app using conda 
+
+```
+git clone https://github.com/MadelineMulder/FRESH.git
+cd application
+conda env create -f freshenv.yml
+conda activate freshenv
+```
+
+Once you have activated the environment, go to the <b>main.py</b> file and set the correct path to the <i>Grand_Bahama.shp</i> and <i>hurricanepolygon.shp</i> which are in the data folder. Do the same for the <i>index.html</i> in the templates folder
+
+When done run the script python main.py in your console and a url will be provided where you can visualize the application in your local machine.
+
+You should have something like this:
+<p align="center">
+  <img width="452" alt="fresh" src="https://github.com/MadelineMulder/FRESH/assets/72496335/35e904a6-cbc7-4dbe-b6cb-00d9d1d0f152"width="1000">
+</p>
+
+
 ## Contents of This Repository
 - Index.HTML: Contains HTML code and content for the homepage of FRESH Project website
 - About.HTML: Contains HTML code and content for the about page of FRESH Project website
 - Documentation.HTML Contains HTML code and content for the documentation page of FRESH Project website
 - CSS: contains style sheet for the FRESH project website
 - Application directory: Contains the code for the Flask web application which hosts the routing and hurricane visualization apps
-  -main.py 
+-  main.py 
 - Routing directory: contains reference material for the routing portion of the project including an early draft of the routing app code and reference code on how to incorporate user input
 
 
