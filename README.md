@@ -48,8 +48,10 @@ You should have something like this:
 *In alphabetical order (images are not included in the following list)*
 
 * **Application Directory:** Contains the code for the Flask web application which hosts the routing and hurricane visualization apps
-    * main.py
-    * j
+    * **Template Directory:** Contains HTML code for Flask project homepage and sample coordinate for testing the routing app 
+    * **color.py:** Contains code for styling hurricane visualization app
+    * **freshenv.yml:** Contains environment for Flask projects
+    * **main.py:** Contains code for Flask project and both routing and hurricane visualization app
 * **CSS Directory:** contains style sheet for the FRESH project website
 * **Data Directory:** Contains data related to the FRESH Project including study area boundary files.
 * **Routing Directory:** Contains reference material for the routing portion of the project including an early draft of the routing app code and reference code on how to incorporate user input
