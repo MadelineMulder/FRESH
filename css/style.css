@@ -71,6 +71,12 @@ main {
   height: 320px;
 }
 
+/* Styles for responsive image to fit page */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 footer {
   background-color: #015486;
   color: #fff;
