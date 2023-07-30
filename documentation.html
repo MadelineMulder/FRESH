@@ -96,7 +96,7 @@
       <p align="center">
       <img width="452" alt="Hurricane App homepage" src="hurricaneapp.jpg"width="1000" >
       </p>
-      <p><b>This part is divided into 2 maps</b></p>
+      <p><i>This part is divided into 2 maps</i></p>
       <h3>Hurricane Formation Animation</h3> 
       <p>This map shows the formation of Hurricane Dorian from the first day to the last day of the event. The hurricane formed on August 24, 2019 from a tropical wave in the Central Atlantic and gradually strengthened as it moved toward the Lesser Antilles and then hit the Grand Bahamas on August 26, 2019.</p>   
       <p>The hurricane edges have animated lines with movement effects using AntPath plugin of Folium Python module. The lines plot a route between multiple locations with the help of latitude and longitudes.</p> 
@@ -120,21 +120,35 @@
             <li><b>Reverse:</b> Whether the animation is going backwards or not.</li> 
             <li><b>Radius:</b> Radius of the circle, if use is set to ‘circle’ </li>
           </ul>
-        <h3>Methodology for developing the hurricane application</h3>
+        <b>Methodology for developing the hurricane application</b>
         <ol type="1">
           <li><b>Initialize the map:</b> Use the Leaflet library to create a map instance, providing the map container ID and initial settings (center, zoom level, etc.).</li>
-          ```
-          latlon = [x, y] 
-          
-          map = folium.Map(location = latlon, tiles='cartodbdark_matter', zoom_start = 5) 
-          ```
-          <li><b>Add a polyline:</b> Create a polyline using the Leaflet library and add it to the map.</li>  
+          <pre><code>
+            latlon = [x, y] 
+            map = folium.Map(location = latlon, tiles='cartodbdark_matter', zoom_start = 5)
+          </code></pre>
+          <li><b>Add a polyline:</b> Create a polyline using the Leaflet library and add it to the map.</li> 
+          <pre><code>
+            pathLatLngs1 = [(),(),(),()] 
+            pathLatLngs2 = [(),(),(),()] 
+            pathLatLngs3 = [(),(),(),()]
+          </code></pre>
           <li><b>Initialize "AntPath" plugins:</b> After adding the polyline, initialize the "AntPath" plugin by passing the polyline and any optional configuration parameters.</li>
+          <pre><code>
+            from folium.plugins import AntPath 
+          </code></pre>
           <li><b>Create antpaths and add to map</b></li>
+          pre><code>
+            AntPath(pathLatLngs1, delay=500, dash_array=[30,15], color="#FECBB6", pulse_color="#BB9983", weight=1, opacity=1).add_to(mm) 
+  
+            AntPath(pathLatLngs2, delay=500, dash_array=[10,50], color="#FEBCA2", pulse_color="#BB8F74", weight=2, opacity=1).add_to(mm) 
+  
+            AntPath(pathLatLngs3, delay=500, dash_array=[10,50], color="#FEAF8F", pulse_color="#BF8A6A", weight=3, opacity=1).add_to(mm) 
+           </code></pre>
         </ol>
         <h3>Hurricane Track with Timestamps</h3>
-        <p>This map shows the Hurricane Tracks evolving over time from the starting point (24 August 2019, 11 A.M.) to the end of hurricane event (26 August 2019, 11 P.M.). The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information.</p>
-        <p>The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information. </p>
+        <p>This map shows the Hurricane Tracks evolving over time from the starting point (24 August 2019, 11 A.M.) to the end of hurricane event (26 August 2019, 11 P.M.).</p>
+        <p>The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. The main function provided by the TimestampedGeoJson plugin is TimestampedGeoJson. It creates a time-aware GeoJSON layer that can be added to a Folium Map. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information. </p>
         <p><b>Data Format:</b> The input data for the TimestampedGeoJson function should be in a GeoJSON-like format with time-series information. Each feature in the GeoJSON should have a properties attribute that includes a time field representing the timestamp for that feature. The time field should be in ISO 8601 format, in our project we used date options to "YYYY/MM/DD HH:mm:ss" because the hurricane moved every 3-4 hours.</p>
         <b>Parameters:</b>
           <ul>
@@ -145,6 +159,14 @@
             <li><b>add_last_point:</b> Set to True to display the last timestamped point (default: True).</li> 
             <li><b>period:</b> The ISO 8601 duration string specifying the time period for each step (default: 'P1D', which stands for one day, in our script we set to every two hours PT2H).</li>
           </ul>
+         <b>Methodology for developing the hurricane application</b>
+          <ol type="1">
+            <li><b>Initialize "AntPath" plugins:</b> To use the TimestampedGeoJson plugin, import it along with Folium in your Python script:</li>
+            <pre><code>
+              import folium 
+              from folium.plugins import TimestampedGeoJson 
+            </code></pre>
+          </ol>
     </section>
 
     <section id = "resources">
