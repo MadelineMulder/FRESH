@@ -103,8 +103,32 @@
             <li>Customizable options for animation speed, color, weight, and more.</li>
             <li>Support for both straight lines and curved polylines (Bezier curves).</li>
         </ul>
+        <b>Parameters:</b>
+          <ul>
+            <li><b>delay:</b> Delay between animation steps in milliseconds (default: 400).</li> 
+            <li><b>dashArray:</b> Array defining a pattern of dashes and gaps for the ant path (default: [10, 20]).</li>
+            <li><b>weight:</b> Weight of the ant path polyline (default: 5).</li>
+            <li><b>color:</b> Color of the ant path polyline (default: '#FF0000').</li> 
+            <li><b>pulseColor:</b> Color of the pulse effect when ants reach the end of the path (default: '#FFFFFF').</li> 
+            <li><b>Locations:</b> Locations through which the ant-path is going. </li>
+            <li><b>Use:</b> Type of shape to use for the ant-path. Possible values are ‘polyline’, ‘polygon’, ‘rectangle’ and ‘circle’.</li> 
+            <li><b>Paused:</b> Whether the animation is running or not.</li> 
+            <li><b>Reverse:</b> Whether the animation is going backwards or not.</li> 
+            <li><b>Radius:</b> Radius of the circle, if use is set to ‘circle’ </li>
+          </ul>
         <h3>Hurricane track with timestamps</h3>
         <p>This map shows the Hurricane Tracks evolving over time from the starting point (24 August 2019, 11 A.M.) to the end of hurricane event (26 August 2019, 11 P.M.). The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information.</p>
+        <p>The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information. </p>
+        <p><b>Data Format:</b>The input data for the TimestampedGeoJson function should be in a GeoJSON-like format with time-series information. Each feature in the GeoJSON should have a properties attribute that includes a time field representing the timestamp for that feature. The time field should be in ISO 8601 format, in our project we used date options to "YYYY/MM/DD HH:mm:ss" because the hurricane moved every 3-4 hours.</p>
+        <b>Parameters:</b>
+          <ul>
+            <li><b>data:</b> The GeoJSON-like data containing time-series information.</li> 
+            <li><b>transition_time:</b> The time interval for animation transitions in milliseconds (default: 200 ms). .</li>
+            <li><b>loop:</b> Set to True if the animation should loop (default: False).</li>
+            <li><b>auto_play:</b> Set to True to automatically start the animation when the map is loaded (default: True).</li> 
+            <li><b>add_last_point:</b> Set to True to display the last timestamped point (default: True).</li> 
+            <li><b>period:</b> The ISO 8601 duration string specifying the time period for each step (default: 'P1D', which stands for one day, in our script we set to every two hours PT2H).</li>
+          </ul>
     </section>
 
     <section id = "resources">
