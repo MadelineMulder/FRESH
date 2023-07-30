@@ -38,13 +38,13 @@
   <main class="main content">
     <section id = "data">
       <h2>I. Data & Tools</h2>
-      <p>Data & Sources</p>
+      <p><b>Data & Sources</b></p>
       <ul>
         <li>Hurricane Dorian path (NOAA)</li>
         <li>Boundary of area of interest (self-generated)</li>
         <li>Flood mask (Copernicus Emergency Management Service) </li>
       </ul>
-      <p>Tools</p>
+      <p><b>Tools</b></p>
       <i>For more information on the python packages used see <b>Additional Resources</b> below</i>
       <ul>
         <li>OSMnx: OSMnx was used for routing analysis as it enabled the creation of real-world street networks to visualize the routes emergency services can take during a flood event.</li>
@@ -54,11 +54,11 @@
     </section>
 
     <section id = "webapplication">
-      <h2>II. Web Application & Flask Set Up</h2>
+      <h2>II. Web application & flask set sp</h2>
       <p>The libraries used to develop the web application include: flask, osmnx, folium and geopandas. Flask, a lightweight web server gateway interface (WSGI) for web application development using python, provided the framework within which the routing and hurricane visualization applications were developed and hosted. </p>
       <p>The web application homepage was designed using HTML. The homepage allows a user to insert coordinates for the starting and endings point that they want to used in the Flood Routing Generator. The routing map then uses the provided coordinates to provide users with the best path for a vehicle to take between the two points. Users can click on the route to reveal the hurricane track and movement maps.</p>
       
-      <h3>Methodology for Developing the Web Application</h3>
+      <h3>Methodology for developing the web application</h3>
       <ol type="1">
         <li>Created an environment and installed all the required packages</li>
         <li>Imported all the packages</li>  
@@ -116,6 +116,18 @@
             <li><b>Reverse:</b> Whether the animation is going backwards or not.</li> 
             <li><b>Radius:</b> Radius of the circle, if use is set to ‘circle’ </li>
           </ul>
+        <h3>Methodology for developing the hurricane application</h3>
+        <ol type="1">
+          <li><b>Initialize the map:</b> Use the Leaflet library to create a map instance, providing the map container ID and initial settings (center, zoom level, etc.).</li>
+          ```
+          latlon = [x, y] 
+          
+          map = folium.Map(location = latlon, tiles='cartodbdark_matter', zoom_start = 5) 
+          ```
+          <li><b>Add a polyline:</b> Create a polyline using the Leaflet library and add it to the map.</li>  
+          <li><b>Initialize "AntPath" plugins:</b> After adding the polyline, initialize the "AntPath" plugin by passing the polyline and any optional configuration parameters.</li>
+          <li><b>Create antpaths and add to map</b></li>
+        </ol>
         <h3>Hurricane track with timestamps</h3>
         <p>This map shows the Hurricane Tracks evolving over time from the starting point (24 August 2019, 11 A.M.) to the end of hurricane event (26 August 2019, 11 P.M.). The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information.</p>
         <p>The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information. </p>
