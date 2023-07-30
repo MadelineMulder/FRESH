@@ -17,6 +17,8 @@ In addition to the web application with the routing and hurricane apps a website
 
 *Team Members: Lisah Ligono, Madeline Mulder, Parinda Pannoon*
 
+
+
 ## How to Deploy the FRESH Web Application Using Flask
 
 At this moment the application can only be installed on localhost. To set this up, please follow the following guidelines:
@@ -40,14 +42,20 @@ You should have something like this:
 </p>
 
 
+
+
 ## Contents of This Repository
-- Index.HTML: Contains HTML code and content for the homepage of FRESH Project website
-- About.HTML: Contains HTML code and content for the about page of FRESH Project website
-- Documentation.HTML Contains HTML code and content for the documentation page of FRESH Project website
-- CSS: contains style sheet for the FRESH project website
-- Application directory: Contains the code for the Flask web application which hosts the routing and hurricane visualization apps
--  main.py 
-- Routing directory: contains reference material for the routing portion of the project including an early draft of the routing app code and reference code on how to incorporate user input
+*In alphabetical order (images are not included in the following list)*
+
+* **Application Directory:** Contains the code for the Flask web application which hosts the routing and hurricane visualization apps
+    * main.py
+    * j
+* **CSS Directory:** contains style sheet for the FRESH project website
+* **Data Directory:** Contains data related to the FRESH Project including study area boundary files.
+* **Routing Directory:** Contains reference material for the routing portion of the project including an early draft of the routing app code and reference code on how to incorporate user input
+* **About.HTML:** Contains HTML code and content for the about page of FRESH Project website
+* **Documentation.HTML:** Contains HTML code and content for the documentation page of FRESH Project website
+* **Index.HTML:** Contains HTML code and content for the homepage of FRESH Project website
 
 
 
