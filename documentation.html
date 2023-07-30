@@ -19,7 +19,7 @@
 
   <section id = "Welcome">
       <h1>Documentation</h1>
-      <p>Welcome to the documentation for the FRESH Project. The following information documents the different components of the web application as well as the data, tools, packages, and methodology used to create them, packages. Instructions on how to install, deploy, and visualize both elements of the web application are also included .</p>
+      <p>Welcome to the documentation for the FRESH Project. The following information documents the different components of the web application as well as the data, tools, packages, and methodology used to create it. Instructions on how to install, deploy, and visualize both elements of the web application are also included below.</p>
   </section>
 
   <!-- Sidebar for navigating the documentation page -->
@@ -38,25 +38,25 @@
   <main class="main content">
     <section id = "data">
       <h2>I. Data & Tools</h2>
-      <p><b>Data & Sources</b></p>
+      <p><b>I.I Data & Sources</b></p>
       <ul>
         <li>Hurricane Dorian path (NOAA)</li>
-        <li>Boundary of area of interest (self-generated)</li>
+        <li>Boundary of area of interest on Grand Bahama Island(self-generated)</li>
         <li>Flood mask (Copernicus Emergency Management Service) </li>
       </ul>
-      <p><b>Tools</b></p>
+      <p><b>I.II Tools & Packages</b></p>
       <i>For more information on the python packages used see <b>Additional Resources</b> below</i>
       <ul>
-        <li><b>OSMnx:</b> OSMnx was used for routing analysis as it enabled the creation of real-world street networks to visualize the routes emergency services can take during a flood event.</li>
-        <li><b>Folium:</b> Folium was used to visualize the hurricane's movement as well as different vector elements (such as marker location)s on the hurricane app.</li>
-        <li><b>Flask:</b> Flask was used as a framework to host the two web routing and hurricane visualization mapping applications for easy organization and deployment.</li>
+        <li><b>OSMnx:</b> OSMnx was used for routing analysis as it enabled the creation of real-world street networks to visualize the driving routes emergency services could take during a flood event.</li>
+        <li><b>Folium:</b> Folium was used to visualize the hurricane's movement as well as different vector elements (such as marker locations) on the hurricane app.</li>
+        <li><b>Flask:</b> Flask was used as a framework to host the two routing and hurricane visualization web mapping applications for easy organization and deployment.</li>
       </ul>
     </section>
 
     <section id = "webapplication">
       <h2>II. Web application & flask set up</h2>
       <p>The libraries used to develop the web application include: flask, osmnx, folium and geopandas. Flask, a lightweight web server gateway interface (WSGI) for web application development using python, provided the framework within which the routing and hurricane visualization applications were developed and hosted. </p>
-      <p>The web application homepage was designed using HTML. The homepage allows a user to insert coordinates for the starting and endings point that they want to used in the Flood Routing Generator. The routing map then uses the provided coordinates to provide users with the best path for a vehicle to take between the two points. Users can click on the route to reveal the hurricane track and movement maps.</p>
+      <p>The web application homepage was designed using HTML. The homepage allows a user to insert coordinates for the starting and endings point that they want to use in the Flood Routing Generator. The routing map then uses the provided coordinates to provide users with the best path for a vehicle to take between the two points. Users can click on the route to reveal the hurricane track and movement maps.</p>
       
       <h3>Methodology for developing the web application</h3>
       <ol type="1">
@@ -65,17 +65,23 @@
         <li>Created a Flask interface application with the name @app and specified the path. In this case we have 3 paths: base, generate_route and hurricane_path</li>
           <ul>
             <li><code>@app.route("/")</code> - This route handles the default root URL</li> 
-            <li><code>@app.route("/generate_route")</code> - uses the starting and ending latitude and longitude values to calculate and display the shortest route on a map using folium. </li> 
-            <li><code>@app.route("/hurricane_path")</code> -  here we display the path for hurricane dorian in an interactive manner </li>
+            <li><code>@app.route("/generate_route")</code> - This route uses the starting and ending latitude and longitude values to calculate and display the shortest driving route on a map using folium. </li> 
+            <li><code>@app.route("/hurricane_path")</code> -  This route displays the path for hurricane Dorian in an interactive manner </li>
           </ul>
       </ol>
       
-      <h3>Steps to Install and Deploy the FLASK web application</h3>
+      <h3>Steps to install and deploy the Flask web application</h3>
       <ol type="1">
         <li>Install the application using conda</li>
+        <pre><code>
+        git clone https://github.com/MadelineMulder/FRESH.git
+        cd application
+        conda env create -f freshenv.yml
+        conda activate freshenv
+        </code></pre>
         <li>Navigate to the <b>main.py</b> file and set the correct path to the <i>Grand_Bahama.shp</i> and <i>hurricanepolygon.shp</i> which are in the data folder.</li>  
         <li>Navigate to the <b>index.html</b> file in the templates folder and set the correct path to the <i>Grand_Bahama.shp</i> and <i>hurricanepolygon.shp</i> which are in the data folder.</li>
-        <li>Run the script python main.py in your console and a url will be provided to visualize the application in your local machine.You should have something like this:</li>
+        <li>Run the script main.py in your console and a url will be provided to visualize the application in your local machine.You should have something like this:</li>
         <p align="center">
         <img width="452" alt="fresh" src="https://github.com/MadelineMulder/FRESH/assets/72496335/35e904a6-cbc7-4dbe-b6cb-00d9d1d0f152"width="1000">
         </p>
@@ -88,7 +94,7 @@
       <p align="center">
       <img width="452" alt="Routing App homepage" src="routing.jpg"width="1000">
       </p>
-      <p>The OSMnx library was used for the routing portion of this project. Osmnx is a python package that lets you download geospatial data from OpenStreetMap and model, project, visualize, and analyze real-world street networks and any other geospatial geometries.</p>
+      <p>The OSMnx library was used for the routing portion of this project. Osmnx is a python package that lets you download geospatial data from OpenStreetMap and model, project, visualize, and analyze real-world street networks and any other geospatial geometries. The full routing code can be viewed in the main.py file within the application directory in the <a href="https://github.com/MadelineMulder/FRESH">FRESH Project Repository</a>. Osmnx is a python package that lets you download geospatial data from OpenStreetMap and model, project, visualize, and analyze real-world street networks and any other geospatial geometries.</p>
     </section>
 
     <section id = "hurricane">  
@@ -97,13 +103,13 @@
       <img width="452" alt="Hurricane App homepage" src="hurricaneapp.jpg"width="1000" >
       </p>
       <p><i>This part is divided into 2 maps</i></p>
-      <h3>Hurricane Formation Animation</h3> 
+      <h3>IV.I Hurricane Formation Animation</h3> 
       <p>This map shows the formation of Hurricane Dorian from the first day to the last day of the event. The hurricane formed on August 24, 2019 from a tropical wave in the Central Atlantic and gradually strengthened as it moved toward the Lesser Antilles and then hit the Grand Bahamas on August 26, 2019.</p>   
       <p>The hurricane edges have animated lines with movement effects using AntPath plugin of Folium Python module. The lines plot a route between multiple locations with the help of latitude and longitudes.</p> 
       <p>"AntPath" is an external plugin that allows you to create animated polylines on a Leaflet map. It adds a unique visual effect to your maps, making it look like ants are moving along the polylines. It provides a visually appealing way to display paths or routes.</p>
       <b>Features:</b> 
         <ul>
-            <li>Animated ant-like movement along polylines, so in this hurricane event, we used this plugin to visualize the movement of each hurricane.</li> 
+            <li>Animated ant-like movement along polylines using the AntPath plugin to visualize the movement of each hurricane.</li> 
             <li>Customizable options for animation speed, color, weight, and more.</li>
             <li>Support for both straight lines and curved polylines (Bezier curves).</li>
         </ul>
@@ -146,9 +152,9 @@
             AntPath(pathLatLngs3, delay=500, dash_array=[10,50], color="#FEAF8F", pulse_color="#BF8A6A", weight=3, opacity=1).add_to(mm) 
           </code></pre>
         </ol>
-        <h3>Hurricane Track with Timestamps</h3>
-        <p>This map shows the Hurricane Tracks evolving over time from the starting point (24 August 2019, 11 A.M.) to the end of hurricane event (26 August 2019, 11 P.M.).</p>
-        <p>The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. The main function provided by the TimestampedGeoJson plugin is TimestampedGeoJson. It creates a time-aware GeoJSON layer that can be added to a Folium Map. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information. </p>
+        <h3>IV.II Hurricane Track with Timestamps</h3>
+        <p>This map shows the tracks for Hurricane Dorian evolving over time from the starting time (24 August 2019, 11 A.M.) to the end of hurricane event (26 August 2019, 11 P.M.).</p>
+        <p>This portion of the application utilises the TimestampedGeoJson plugin which is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. The main function provided by the TimestampedGeoJson plugin is TimestampedGeoJson. It creates a time-aware GeoJSON layer that can be added to a Folium Map. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information. </p>
         <p><b>Data Format:</b> The input data for the TimestampedGeoJson function should be in a GeoJSON-like format with time-series information. Each feature in the GeoJSON should have a properties attribute that includes a time field representing the timestamp for that feature. The time field should be in ISO 8601 format, in our project we used date options to "YYYY/MM/DD HH:mm:ss" because the hurricane moved every 3-4 hours.</p>
         <b>Parameters:</b>
           <ul>
@@ -161,7 +167,7 @@
           </ul>
          <b>Methodology for developing the hurricane tracking with timestamps application</b>
           <ol type="1">
-            <li><b>Initialize "AntPath" plugins:</b> To use the TimestampedGeoJson plugin, import it along with Folium in your Python script:</li>
+            <li><b>Initialize "TimestampedGeoJson" plugins:</b> To use the TimestampedGeoJson plugin, import it along with Folium in your Python script:</li>
             <pre><code>
               import folium 
               from folium.plugins import TimestampedGeoJson 
