@@ -16,16 +16,34 @@
       </ul>
     </nav>
   </header>
+
+  <div class="container">
+    <div class="column">
+      <img src="path_to_your_photo.jpg" alt="Photo">
+    </div>
+    <div class="column">
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+    </div>
   
   <main>
     <section>
-      <h1>About this Project</h1>
-      <p>Natural disasters are formidable events that have caused a lot of damage around the world. Presently, these disasters have become more persistentand , thus the need to leverage technology to study and analyze these emerging patterns. The aim of this project is to create a python-based web application focused on identifying accessible routes during natural disasters. Specifically, this web application identifies the best path between points during the flood event that took place on Grand Bahama Island during Hurricane Dorian in 2019.</p> 
-      
-      <p>This app has two main focuses: <b>routing analysis</b> and <b>visualization</b> of the flood event caused by Hurricane Dorian. As such, the app includes an interactive web application that identifies the best path between user-defined starting and ending points during the flood event as well as a visualization of hurricane Dorian's path towards Grand Bahama Island. </p>   
+      <div class="container">
+        <div class="column">
+          <h1>About this Project</h1>
+          <p>Natural disasters are formidable events that have caused a lot of damage around the world. Presently, these disasters have become more persistent and peculiar, thus the pressing need to leverage geospatial technology to study and analyze these emerging patterns. The aim of this project is to create a python-based web application focused on identifying accessible routes during natural disasters. Specifically, this web application identifies the best path between points during the flood event that took place on Grand Bahama Island during Hurricane Dorian in 2019.</p> 
+          
+          <p>This app has two main focuses: <b>routing analysis</b> and <b>visualization</b> of the flood event caused by Hurricane Dorian. As such, the app includes an interactive web application that identifies the best path between user-defined starting and ending points during the flood event as well as a visualization of hurricane Dorian's path towards Grand Bahama Island. </p>   
+        
+          <p>To accomplish this, the app relies on OSMnx for routing analysis as well as Flask and Folium to build and visualize a web map of the data layers and routing results. Navigate to the <b>documentation page</b> to learn about how to deploy the web application.</p>
     
-      <p>To accomplish this, the app relies on OSMnx for routing analysis as well as Flask and Folium to build and visualize a web map of the data layers and routing results.</p>
-      
+          <h4>Read more about the inspiration for this project here:</h4>
+          <a href="https://storymaps.arcgis.com/stories/f819f3563aef4cad8cfae7072eed0d07">Foresight DRM: Disaster Mapping Hackathon 2023</a>
+        </div>
+        <div class="column">
+          <img src="Dorian.png" alt="Hurricane Dorian">
+        </div>
+      </div>
       <h2>Objectives</h2>
       <ol>
       <li>To visualize the movement of Hurricane Dorian on its path towards Grand Bahama Island in 2019</li>
@@ -33,11 +51,10 @@
       <li>To design a user interactive interface that allows users to choose two points of interest between which the best route will be calculated in the face of the flooding caused by Hurricane Dorian</li>
       </ol>
 
-      <h3>Read more about the inspiration for this project here:</h3>
-      <a href="https://storymaps.arcgis.com/stories/f819f3563aef4cad8cfae7072eed0d07">Foresight DRM: Disaster Mapping Hackathon 2023</a>
-
-      <h2>Team Members</h2>
-      <img src="TeamMembers.png" alt="Team Members">
+      <div class="banner">
+        <h2>Team Members</h2>
+        <img src="TeamMembers.png" alt="Team Members">
+      </div>
     </section>
   </main>
   
