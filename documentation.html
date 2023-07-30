@@ -47,14 +47,14 @@
       <p><b>Tools</b></p>
       <i>For more information on the python packages used see <b>Additional Resources</b> below</i>
       <ul>
-        <li>OSMnx: OSMnx was used for routing analysis as it enabled the creation of real-world street networks to visualize the routes emergency services can take during a flood event.</li>
-        <li>Folium: Folium was used to visualize the hurricane's movement as well as different vector elements (such as marker location)s on the hurricane app.</li>
-        <li>Flask: Flask was used as a framework to host the two web routing and hurricane visualization mapping applications for easy organization and deployment.</li>
+        <li><b>OSMnx:</b> OSMnx was used for routing analysis as it enabled the creation of real-world street networks to visualize the routes emergency services can take during a flood event.</li>
+        <li><b>Folium:</b> Folium was used to visualize the hurricane's movement as well as different vector elements (such as marker location)s on the hurricane app.</li>
+        <li><b>Flask:</b> Flask was used as a framework to host the two web routing and hurricane visualization mapping applications for easy organization and deployment.</li>
       </ul>
     </section>
 
     <section id = "webapplication">
-      <h2>II. Web application & flask set sp</h2>
+      <h2>II. Web application & flask set up</h2>
       <p>The libraries used to develop the web application include: flask, osmnx, folium and geopandas. Flask, a lightweight web server gateway interface (WSGI) for web application development using python, provided the framework within which the routing and hurricane visualization applications were developed and hosted. </p>
       <p>The web application homepage was designed using HTML. The homepage allows a user to insert coordinates for the starting and endings point that they want to used in the Flood Routing Generator. The routing map then uses the provided coordinates to provide users with the best path for a vehicle to take between the two points. Users can click on the route to reveal the hurricane track and movement maps.</p>
       
@@ -85,15 +85,19 @@
 
     <section id = "routing">
       <h2>III. Routing</h2>
+      <p align="center">
       <img width="452" alt="Routing App homepage" src="routing.jpg"width="1000">
+      </p>
       <p>The OSMnx library was used for the routing portion of this project. Osmnx is a python package that lets you download geospatial data from OpenStreetMap and model, project, visualize, and analyze real-world street networks and any other geospatial geometries.</p>
     </section>
 
     <section id = "hurricane">  
       <h2>IV. Hurricane Visualization</h2>
+      <p align="center">
       <img width="452" alt="Hurricane App homepage" src="hurricaneapp.jpg"width="1000" >
-      <b>This part is divided into 2 maps</b>
-      <h3>Hurricane formation animation</h3> 
+      </p>
+      <p><b>This part is divided into 2 maps</b></p>
+      <h3>Hurricane Formation Animation</h3> 
       <p>This map shows the formation of Hurricane Dorian from the first day to the last day of the event. The hurricane formed on August 24, 2019 from a tropical wave in the Central Atlantic and gradually strengthened as it moved toward the Lesser Antilles and then hit the Grand Bahamas on August 26, 2019.</p>   
       <p>The hurricane edges have animated lines with movement effects using AntPath plugin of Folium Python module. The lines plot a route between multiple locations with the help of latitude and longitudes.</p> 
       <p>"AntPath" is an external plugin that allows you to create animated polylines on a Leaflet map. It adds a unique visual effect to your maps, making it look like ants are moving along the polylines. It provides a visually appealing way to display paths or routes.</p>
@@ -128,10 +132,10 @@
           <li><b>Initialize "AntPath" plugins:</b> After adding the polyline, initialize the "AntPath" plugin by passing the polyline and any optional configuration parameters.</li>
           <li><b>Create antpaths and add to map</b></li>
         </ol>
-        <h3>Hurricane track with timestamps</h3>
+        <h3>Hurricane Track with Timestamps</h3>
         <p>This map shows the Hurricane Tracks evolving over time from the starting point (24 August 2019, 11 A.M.) to the end of hurricane event (26 August 2019, 11 P.M.). The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information.</p>
         <p>The TimestampedGeoJson plugin is an extension to Folium that allows users to display time-series data on a map using GeoJSON files with timestamps. This plugin is particularly useful for displaying temporal data such as the movement of objects, changes in events over time, or any other time-based geospatial information. </p>
-        <p><b>Data Format:</b>The input data for the TimestampedGeoJson function should be in a GeoJSON-like format with time-series information. Each feature in the GeoJSON should have a properties attribute that includes a time field representing the timestamp for that feature. The time field should be in ISO 8601 format, in our project we used date options to "YYYY/MM/DD HH:mm:ss" because the hurricane moved every 3-4 hours.</p>
+        <p><b>Data Format:</b> The input data for the TimestampedGeoJson function should be in a GeoJSON-like format with time-series information. Each feature in the GeoJSON should have a properties attribute that includes a time field representing the timestamp for that feature. The time field should be in ISO 8601 format, in our project we used date options to "YYYY/MM/DD HH:mm:ss" because the hurricane moved every 3-4 hours.</p>
         <b>Parameters:</b>
           <ul>
             <li><b>data:</b> The GeoJSON-like data containing time-series information.</li> 
