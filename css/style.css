@@ -72,9 +72,15 @@ main {
 }
 
 /* Styles for responsive image to fit page */
-img {
-  max-width: 100%;
-  height: auto;
+.image-container {
+  max-width: 100%; /* Ensure the container does not exceed the view width */
+}
+
+/* Styles for the responsive image */
+.image-container img {
+  display: block; /* Remove any extra space below the image */
+  max-width: 100%; /* Set the image width to 100% of its container */
+  height: auto; /* Maintain the image's aspect ratio */
 }
 
 footer {
