@@ -8,6 +8,7 @@ from folium import plugins
 from folium.plugins import AntPath
 from markupsafe import Markup
 
+# Application development 
 app = Flask(__name__, template_folder='templates')
 
 @app.route("/")
@@ -55,6 +56,7 @@ def routing():
     folium.LayerControl().add_to(shortest_route_map)
     return shortest_route_map._repr_html_()
 
+# Hurricane section
 @app.route("/hurricane_path")
 def hurricane():
     table1 = """\
